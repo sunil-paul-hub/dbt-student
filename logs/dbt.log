@@ -1,0 +1,58 @@
+[0m17:54:33.266384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216FE15F770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216FF3CBC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216FF3CB750>]}
+
+
+============================== 17:54:33.271194 | 2b7887d0-3ed0-4b93-a3f2-a016b50d7bd4 ==============================
+[0m17:54:33.271194 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:54:33.271846 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Paul\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:54:33.360141 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\Paul\.dbt
+[0m17:54:47.635950 [error] [MainThread]: Encountered an error:
+
+[0m17:54:47.638776 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Paul\Documents\GitHub\dbt-student\.venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Paul\Documents\GitHub\dbt-student\.venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Paul\Documents\GitHub\dbt-student\.venv\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\Paul\Documents\GitHub\dbt-student\.venv\Lib\site-packages\dbt\task\init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+  File "C:\Users\Paul\Documents\GitHub\dbt-student\.venv\Lib\site-packages\dbt\task\init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "C:\Users\Paul\Documents\GitHub\dbt-student\.venv\Lib\site-packages\click\termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\Paul\Documents\GitHub\dbt-student\.venv\Lib\site-packages\click\termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m17:54:47.639772 [debug] [MainThread]: Command `dbt init` failed at 17:54:47.639661 after 14.54 seconds
+[0m17:54:47.640042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216FF5F02B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216FF49CDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216FF4EC270>]}
+[0m17:54:47.640315 [debug] [MainThread]: Flushing usage events
+[0m17:54:48.257028 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:55:13.287753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FA851F770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FA978BC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FA978B750>]}
+
+
+============================== 17:55:13.291669 | be44c775-06f4-410e-970e-b83e0c12b23b ==============================
+[0m17:55:13.291669 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:55:13.292255 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Paul\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init --skip-profile-setup airbnb', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:55:13.320631 [debug] [MainThread]: Starter project path: C:\Users\Paul\Documents\GitHub\dbt-student\.venv\Lib\site-packages\dbt\include\starter_project
+[0m17:55:13.363763 [info ] [MainThread]: 
+Your new dbt project "airbnb" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:55:13.365561 [debug] [MainThread]: Command `dbt init` succeeded at 17:55:13.365383 after 0.21 seconds
+[0m17:55:13.365996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FAA785E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FAA8445F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FA962B130>]}
+[0m17:55:13.366499 [debug] [MainThread]: Flushing usage events
+[0m17:55:13.946653 [debug] [MainThread]: An error was encountered while trying to flush usage events
