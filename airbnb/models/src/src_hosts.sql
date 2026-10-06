@@ -1,6 +1,6 @@
 WITH raw_hosts AS (
     SELECT 
-        name,
+        name AS host_name,
         is_superhost,
         created_at,
         updated_at
