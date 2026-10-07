@@ -20,4 +20,4 @@ SELECT
     END AS is_full_moon
 FROM fct_reviews r
 LEFT JOIN full_moon_dates f
-    ON (TO_DATE(r.review_date) = TO_DATE(f.full_moon_date))
+    ON (TO_DATE(r.review_date) = DATEADD(DAY, 1, f.full_moon_date))
