@@ -1,0 +1,22 @@
+version: 2
+sources:
+  - name: airbnb
+    description: "This is the source data for the Airbnb project."
+    schema: raw
+    tables:
+      - name: listings
+        description: "This table contains the raw listings data for the Airbnb project."
+        identifier: raw_listings
+        
+      - name: hosts
+        description: "This table contains the raw hosts data for the Airbnb project."
+        identifier: raw_hosts
+      
+      - name: reviews
+        description: "This table contains the raw reviews data for the Airbnb project."
+        identifier: raw_reviews
+        config:
+          loaded_at_field: date
+          freshness:
+            warn_after: {count: 1, period: day}
+            error_after: {count: 2, period: day}
